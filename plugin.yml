@@ -1,3 +1,6 @@
 name: AntiDownload
 main: com.jjacobson.antidownload.AntiDownload
 version: 1.0
+permissions:
+  antidownload.bypass:
+    default: op
