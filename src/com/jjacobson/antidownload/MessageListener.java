@@ -20,6 +20,9 @@ public class MessageListener implements PluginMessageListener {
 
     @Override
     public void onPluginMessageReceived(String channel, Player player, byte[] bytes) {
+        if (player.hasPermission("antidownload.bypass")) {
+            return;
+        }
         if (channel.equals("WDL|INIT")) {
             plugin.getServer().dispatchCommand(plugin.getServer().getConsoleSender(), command.replace("%player%", player.getName()));
         }
